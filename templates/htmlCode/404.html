@@ -1,0 +1,11 @@
+{% block content %}
+    Welcome to your new Silex Application!
+{% endblock %}
+<h1>{{ name }}</h1>
+
+{% if is_granted('ROLE_USER') %}
+    <p>Welcome {{ app.security.token.user.username }}!</p>
+    <p><a href="{{ path('logout') }}">Log out</a></p>
+{% else %}
+    <h1>You are not logged in</h1>
+{% endif %}

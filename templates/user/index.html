@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% include 'fragments/topHead.html' %}
+    <!-- Bootstrap -->
+        {% include 'fragments/topInclude.html' %}
+    </head>
+<body>
+    {% include 'fragments/userNavBar.html' %}
+<div class="container">
+    <div class="row">
+        <div class="col-xs-3">
+            <!--
+            {% include 'fragments/sideBar.html' %}
+            -->
+        </div>
+        <div class="col-xs-9">
+        <div>
+            <h1>
+                Main content
+            </h1>
+            <p>
+                You have been logged in using OAuth 2.
+                Welcome user "{{user.name}}"
+            </p>
+            <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <td>Name</td>
+                        <td>Value</td>
+                    </tr>
+                </thead>
+                    {% for eachParameter in userInformation %}
+                        <tr>
+                                <td>{{ eachParameter.name }}</td>
+                                <td>{{ eachParameter.value }}</td>
+                        </tr>
+                    {% endfor %}
+            </table>
+        </div>
+
+        </div>
+        </div>
+</div>
+<hr>
+    {% include 'fragments/footer.html' %}
+</div>
+
+</body>
+</html>

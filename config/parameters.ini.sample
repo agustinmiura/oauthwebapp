@@ -1,0 +1,69 @@
+;------------------------------
+;Db parameters
+;--------------------------------------
+dbUser="root"
+dbPassword="password"
+dbUrl="127.0.0.1"
+dbPort=3306
+dbName="oauth"
+;-----------------------------
+;Twig cache directory
+;-----------------------------------
+twig.cache=/home/user/tmp/oauth2/twig_cache
+;--------------------------------------
+;Use 1 to log all the sql executed or 0
+;------------------------------------
+doctrine.debug.sql=0
+doctrine.proxyDirectory=/home/user/tmp/oauth2/doctrine_proxy_dir
+;-----------------------------------------
+;Monolog configuration parameters
+;Levels :
+;DEBUG => 100
+;INFO => 200
+;NOTICE => 250
+;WARNING => 300
+;ERROR => 400
+;CRITICAL => 500
+;ALERT => 550
+;EMERGENCY => 600
+;------------------------------
+monolog.file=/home/user/tmp/oauth2/logs/monolog.log
+monolog.level=100
+;-------------------------------------
+;OAuth2 parameters
+;-------------------------------------------
+oauth2['authorizationEndPoint']='https://accounts.google.com/o/oauth2/auth'
+oauth2['response_type']='code'
+oauth2['clientId']='1027598824841-62mddh4buolp6t667ggo4v9qf6jtqc2a.apps.googleusercontent.com'
+oauth2['redirect_uri']='http://www.oauth2.example2.com/oauth2callback'
+oauth2['scope']='https://www.googleapis.com/auth/userinfo.email'
+oauth2['state']='ssss'
+oauth2['access_type']='online'
+oauth2['approval_prompt']='auto'
+oauth2['login_hint']=''
+oauth2['client_secret']='B7GrZn7wQa_Wc3irURD6rOcr'
+oauth2['tokenEndPoint']='https://accounts.google.com/o/oauth2/token'
+oauth2['httpClientLogPath']='/home/user/tmp/oauth2/logs/httpClient.log'
+oauth2['httpClientInfoRetrieverPath']='/home/user/tmp/oauth2/logs/httpClient.log'
+oauth2['grantType']='authorization_code'
+oauth2['revokeEndPoint']='https://accounts.google.com/o/oauth2/revoke?token=%s'
+
+;-------------------------------------
+;OAuth2 parameters to use google plus 
+;information from the user
+;Remove this after
+;-------------------------------------
+googleplus.url="https://accounts.google.com/o/oauth2/auth"
+googleplus.response.type="code"
+googleplus.client.id="yourkey.apps.googleusercontent.com"
+googleplus.client.secret="ClientSecret"
+googleplus.redirect_uri="http://devbox.example.com/oauth2callback"
+googleplus.scope="https://www.googleapis.com/auth/plus.me"
+;--------------------------------------
+;Php options
+;---------------------------------------
+php['session.savePath'] = '/home/user/tmp/php/session';
+;---------------------------------------------------------
+;Doctrine
+;--------------------------------------------------------
+doctrine['proxyDirectory'] = '/home/user/tmp/oauth2/doctrine_proxy_dir'

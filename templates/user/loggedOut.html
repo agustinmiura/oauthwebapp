@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% include 'fragments/topHead.html' %}
+    <!-- Bootstrap -->
+        {% include 'fragments/topInclude.html' %}
+    </head>
+<body>
+    {% include 'fragments/userNavBar.html' %}
+<div class="container">
+    <div class="row">
+        <div class="col-xs-3">
+            <!--
+            {% include 'fragments/sideBar.html' %}
+            -->
+        </div>
+        <div class="col-xs-9">
+        <div>
+            <h1>
+                Logged out
+            </h1>
+            <p>
+                You have been logged out from the
+                application
+            </p>
+            <a href="/login">Click to login</a>
+        </div>
+
+        </div>
+        </div>
+</div>
+<hr>
+    {% include 'fragments/footer.html' %}
+</div>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% include 'fragments/topHead.html' %}
+    <!-- Bootstrap -->
+    {% include 'fragments/topInclude.html' %}
+</head>
+<body>
+    {% include 'fragments/navBarLogin.html' %}
+    <div class="container">
+        <div class="col-xs-9">
+          <div class="jumbotron text-danger">
+            <h1>
+              {{ errorTitle }} 
+          </h1>
+          <p>
+          </p>
+      </div>
+  </div>
+  <div class="col-xs-9">
+      <div class>
+        <h2 class="text-danger">
+            {{ errorDetail }}
+      </h2>
+      <p class="text-danger">
+
+      </p>
+  </div>
+</div>
+</div>
+</div>
+<hr>
+{% include 'fragments/footer.html' %}
+</div>
+
+</body>
+</html>

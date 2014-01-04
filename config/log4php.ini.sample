@@ -1,0 +1,27 @@
+# Appender named "default"
+log4php.appender.default = LoggerAppenderEcho
+log4php.appender.default.layout = LoggerLayoutSimple
+
+# Root logger, linked to "default" appender
+log4php.rootLogger = DEBUG, file
+
+# Appender named "file"
+log4php.appender.file = LoggerAppenderDailyFile
+log4php.appender.file.layout = LoggerLayoutPattern
+log4php.appender.file.layout.conversionPattern = %d{ISO8601} [%p] %c: %m at %F line %L %n
+log4php.appender.file.datePattern = Ymd
+log4php.appender.file.file = /home/user/tmp/oauth2/logs/webapp.log
+log4php.appender.file.threshold = debug
+
+# Appender named "customLogger"
+log4php.appender.custom = LoggerAppenderDailyFile
+log4php.appender.custom.layout = LoggerLayoutPattern
+log4php.appender.custom.layout.conversionPattern = %d{ISO8601} [%p] %c: %m at %F line %L %n
+log4php.appender.custom.datePattern = Ymd
+log4php.appender.custom.file = /home/user/tmp/oauth2/logs/custom.log
+log4php.appender.custom.threshold = debug
+
+
+# Logger named "foo.bar", linked to "file" appender
+log4php.logger.MyLogger = debug, custom
+log4php.additivity.MyLogger = true
